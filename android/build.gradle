@@ -3,9 +3,11 @@ buildscript {
         buildToolsVersion = "36.0.0"
         minSdkVersion = 24
         compileSdkVersion = 36
+        compileSdk = 36
         targetSdkVersion = 36
         ndkVersion = "27.1.12297006"
         kotlinVersion = "2.1.20"
+        REACT_NATIVE_NODE_MODULES_DIR = "${rootDir}/../node_modules/react-native"
     }
     repositories {
         google()
@@ -18,4 +20,37 @@ buildscript {
     }
 }
 
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty('android')) {
+            project.android {
+                if (it.hasProperty('compileSdkVersion')) {
+                    compileSdkVersion rootProject.ext.compileSdkVersion
+                }
+                if (it.hasProperty('buildToolsVersion')) {
+                    buildToolsVersion rootProject.ext.buildToolsVersion
+                }
+                defaultConfig {
+                    if (it.hasProperty('minSdkVersion')) {
+                        minSdkVersion rootProject.ext.minSdkVersion
+                    }
+                    if (it.hasProperty('targetSdkVersion')) {
+                        targetSdkVersion rootProject.ext.targetSdkVersion
+                    }
+                }
+            }
+        }
+    }
+}
+
 apply plugin: "com.facebook.react.rootproject"
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven {
+            url("${rootDir}/../node_modules/@react-native-async-storage/async-storage/android/local_repo")
+        }
+    }
+}

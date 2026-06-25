@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Added by Antigravity: Ensure Node is in the PATH for Gradle
+export PATH="$(dirname "$0"):$PATH"
+
 #
 # Copyright © 2015 the original authors.
 #

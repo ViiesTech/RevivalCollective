@@ -1,0 +1,28 @@
+export const AppImages = {
+  logo: require('../assets/Images/logo.png'),
+  logoShadow: require('../assets/Images/logoShadow.png'),
+  splashBg: require('../assets/Images/splashBg.png'),
+  onBoarding1: require('../assets/Images/onBoarding1.png'),
+  onBoarding2: require('../assets/Images/onBoarding2.png'),
+  onBoarding3: require('../assets/Images/onBoarding3.png'),
+  // ── Main screens ──────────────────────────────────────────
+  post: require('../assets/Images/post.png'),
+  post2: require('../assets/Images/post2.png'),
+  profile: require('../assets/Images/profile.png'),
+  story1: require('../assets/Images/story1.png'),
+  story2: require('../assets/Images/story2.png'),
+  book1: require('../assets/Images/book1.png'),
+  book2: require('../assets/Images/book2.png'),
+  book3: require('../assets/Images/book3.png'),
+  dimImage: require('../assets/Images/dimImage.png'),
+  featuredBook: require('../assets/Images/featuredBook.png'),
+  profilePicture: require('../assets/Images/profilePicture.png'),
+  likeIcon: require('../assets/Images/likeIcon.png'),
+  myMap: require('../assets/Images/myMap.png'),
+  comment: require('../assets/Images/comment.png'),
+  share: require('../assets/Images/share.png'),
+  repost: require('../assets/Images/repost.png'),
+  bookmark: require('../assets/Images/bookmark.png'),
+  bible: require('../assets/Images/bible.png'),
+
+};
